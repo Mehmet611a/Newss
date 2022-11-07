@@ -131,7 +131,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   align-items: center;
   z-index: 1000;
   opacity: 0.6;
-  cursor: pointer;
+  cursor:pointer;
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -139,13 +139,13 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .symbol-btn-back-to-top {
-  font-size: 18px;
+  font-size: 25px;
   color: white;
   line-height: 1em;
 }
 
 .btn-back-to-top:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 @media (max-width: 575px) {
@@ -216,7 +216,7 @@ a.left-topbar-item:hover {
   content: "";
   display: block;
   position: absolute;
-  width: 1px;
+  width: 1px; 
   height: 10px;
   background-color: #fff;
   opacity: 0.1;
@@ -247,6 +247,7 @@ a.left-topbar-item:hover {
 
 .right-topbar a:hover {
   color: rgb(33, 191, 199);
+  transform: scale(0.9);
 }
 
 /*------------------------------------------------------------------
@@ -553,6 +554,18 @@ li.respon-sub-menu > .sub-menu .sub-menu {
     padding: 8px 20px;
   }
 }
+
+/* .zoom {
+  padding: 50px;
+  transition: transform .2s; 
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+} */
 
 
 /*---------------------------------------------*/
@@ -1116,6 +1129,64 @@ a.breadcrumb-item:hover {
 }
 
 
+/* Social Media Icons Footer */
+/* .social {
+  position: relative;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.social .link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px dashed white;
+  background-clip: content-box;
+  padding: 10px;
+  transition: .5s;
+  color: #D7D0BE;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 70px;
+}
+
+.social .link span {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social .link:hover {
+  padding: 20px;
+  color: white;
+  margin-left: -5px;
+  transform: translateX(10px) rotate(360deg);
+}
+
+.social .link.google-plus {
+  background-color: tomato;
+  color: white;
+}
+
+.social .link.twitter {
+  background-color: #00ACEE;
+  color: white;
+}
+
+.social .link.facebook {
+  background-color: #3B5998;
+  color: white;
+} */
+
+
 /*==================================================================
    COLOR COLOR COLOR COLOR COLOR COLOR COLOR COLOR COLOR COLOR COLOR 
 ==================================================================*/
@@ -1542,13 +1613,19 @@ a.breadcrumb-item:hover {
 .bg10 {background-color: rgb(33, 191, 199);}
 .bg11 {background-color: #151515;}
 
-
 /*---------------------------------------------*/
 .bg-img1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition : transform 1s, filter 1s ease-out;
+  overflow : hidden;
 }
+
+.bg-img1:hover {
+  transform : scale(0.9);
+}
+
 
 /*---------------------------------------------*/
 .bg-img2 {
@@ -1673,6 +1750,7 @@ a.breadcrumb-item:hover {
 }
 
 .how1:hover .how1-child1 {
+  /* transform: scale(1); */
   opacity: 0.3;
 }
 
@@ -1723,6 +1801,62 @@ a.breadcrumb-item:hover {
 }
 
 
+/* Search Button 05-11-22*/
+
+.search-box{
+  width: fit-content;
+  height: min-content;
+  position: relative;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #09b2adb7;
+  padding-right: 40px;
+  color:rgb(0, 0, 0);
+}
+.input-search::placeholder{
+  color:grey;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:black ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
 
 /*==================================================================
       PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO
@@ -1733,7 +1867,7 @@ a.breadcrumb-item:hover {
 .hov-cl0:hover {color: #fff;}
 .hov-bg0:hover {background-color: #fff;}
 
-.hov-cl10:hover {color: rgb(33, 191, 199);}
+.hov-cl10:hover {color: rgb(33, 191, 199); opacity: 0.8;}
 .hov-bg10:hover {background-color: rgb(33, 191, 199);}
 
 /*---------------------------------------------*/
@@ -1773,14 +1907,16 @@ a.breadcrumb-item:hover {
 
 /*---------------------------------------------*/
 .hov-btn2:hover {
-  border-color: rgb(33, 191, 199);
-  color: rgb(33, 191, 199);
+  background-color: rgb(33, 191, 199);
+  color:black;
 }
 
 
 /*---------------------------------------------*/
 .hov1:hover {
   opacity: 0.8;
+  transform : scale(0.9);
+  -webkit-filter: blur(1px);
 }
 
 
@@ -1827,7 +1963,10 @@ a.breadcrumb-item:hover {
 [ Wrap Picture ]*/
 .wrap-pic-s, .wrap-pic-max-s,
 .wrap-pic-w, .wrap-pic-max-w,
-.wrap-pic-h, .wrap-pic-max-h {display: block;}
+.wrap-pic-h, .wrap-pic-max-h {display: block;
+  transition : transform 1s, filter 1s ease-out;
+  overflow : hidden;
+}
 
 .wrap-pic-w > img {width: 100%;}
 .wrap-pic-max-w > img {max-width: 100%;}
