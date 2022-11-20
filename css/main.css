@@ -93,7 +93,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .loader05 {
   width: 56px;
-  height: 56px;
+  height: 56px; 
   border: 4px solid rgb(33, 191, 199);
   border-radius: 50%;
   position: relative;
@@ -1620,10 +1620,16 @@ a.breadcrumb-item:hover {
   background-size: cover;
   transition : transform 1s, filter 1s ease-out;
   overflow : hidden;
+  /* overflow:hidden;
+  -webkit-transform: scale(1);
+  transform : scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; */
 }
 
 .bg-img1:hover {
-  transform : scale(0.9);
+  /* -webkit-transform: scale(1.3); */
+  transform: scale(0.9);
 }
 
 
@@ -1751,7 +1757,7 @@ a.breadcrumb-item:hover {
 
 .how1:hover .how1-child1 {
   /* transform: scale(1); */
-  opacity: 0.3;
+  opacity: 1;
 }
 
 .how1-child2 {
@@ -1818,7 +1824,7 @@ a.breadcrumb-item:hover {
   outline: none;
   border-radius: 25px;
   transition: all .5s ease-in-out;
-  background-color: #09b2adb7;
+  background-color: white;
   padding-right: 40px;
   color:rgb(0, 0, 0);
 }
